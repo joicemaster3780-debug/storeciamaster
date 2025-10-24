@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>To‑Do List — Store Cia Master</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <h1>To‑Do List</h1>
+      <p class="subtitle">Simples, rápido e salva no seu navegador (localStorage).</p>
+    </header>
+
+    <section class="create">
+      <form id="new-task-form" aria-label="Adicionar nova tarefa">
+        <input id="new-task-input" type="text" placeholder="Adicione uma tarefa e pressione Enter" aria-label="Descrição da tarefa" />
+        <button id="add-btn" type="submit" aria-label="Adicionar tarefa">Adicionar</button>
+      </form>
+
+      <div class="controls">
+        <div class="filters" role="tablist" aria-label="Filtros de tarefas">
+          <button class="filter active" data-filter="all" role="tab">Todas</button>
+          <button class="filter" data-filter="active" role="tab">Ativas</button>
+          <button class="filter" data-filter="completed" role="tab">Concluídas</button>
+        </div>
+
+        <div class="actions">
+          <button id="clear-completed" title="Limpar tarefas concluídas">Limpar concluídas</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="list-section" aria-live="polite">
+      <ul id="task-list" class="task-list" aria-label="Lista de tarefas"></ul>
+    </section>
+
+    <footer class="footer">
+      <div id="task-count" class="task-count">0 tarefas</div>
+      <div class="legend">Dica: clique na tarefa para marcar/desmarcar. Clique no lápis para editar.</div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
