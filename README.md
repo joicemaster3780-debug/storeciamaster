@@ -1,0 +1,2 @@
+# storeciamaster
+Um novo passo.
